@@ -463,23 +463,11 @@ p { margin-bottom: 1rem; }
 }
 
 /* ============================================
-   Animations — visible by default, enhanced on scroll
+   Animations — always visible, subtle entrance on scroll
    ============================================ */
 .fade-in {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .fade-in {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* ============================================
