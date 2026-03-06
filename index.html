@@ -31,7 +31,8 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero-with-image" style="background: linear-gradient(160deg, var(--white) 0%, var(--teal-bg) 50%, var(--teal-light) 100%);">
+    <style>.hero-with-image::before { background-image: url('images/hero-bg.jpg'); }</style>
     <div class="container">
       <div class="hero-content">
         <h1>Healing Wounds.<br><span>Restoring Lives.</span></h1>
@@ -45,15 +46,20 @@
     </div>
   </section>
 
-  <!-- About Intro -->
+  <!-- About Intro with Image -->
   <section class="section">
     <div class="container">
-      <div class="fade-in" style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <span class="section-label">About Our Practice</span>
-        <h2>Comprehensive, Patient-Centered Wound Care</h2>
-        <p>Effective communication and teamwork between patients, caregivers, and healthcare providers is central to our approach, allowing us to deliver coordinated, patient-centered care. By collaborating with primary care physicians, home health services, and specialists, we streamline the treatment process for efficiency and effectiveness.</p>
-        <p>Rest assured, we will make the appropriate referrals in the event a patient needs additional specialized care, for example, Infectious Disease, Vascular, Podiatric, or General surgery. Our mission extends beyond healing wounds—we strive to educate patients and implement preventive strategies to reduce the likelihood of future wound complications.</p>
-        <a href="about.html" class="btn btn-outline" style="margin-top: 16px;">Meet Our Team</a>
+      <div class="feature-row fade-in">
+        <div>
+          <span class="section-label">About Our Practice</span>
+          <h2>Comprehensive, Patient-Centered Wound Care</h2>
+          <p>Effective communication and teamwork between patients, caregivers, and healthcare providers is central to our approach, allowing us to deliver coordinated, patient-centered care. By collaborating with primary care physicians, home health services, and specialists, we streamline the treatment process for efficiency and effectiveness.</p>
+          <p>Rest assured, we will make the appropriate referrals in the event a patient needs additional specialized care, for example, Infectious Disease, Vascular, Podiatric, or General surgery. Our mission extends beyond healing wounds—we strive to educate patients and implement preventive strategies to reduce the likelihood of future wound complications.</p>
+          <a href="about.html" class="btn btn-outline" style="margin-top: 16px;">Meet Our Team</a>
+        </div>
+        <div class="feature-image">
+          <img src="images/nurse-care.jpg" alt="Healthcare provider caring for a patient" />
+        </div>
       </div>
     </div>
   </section>
@@ -178,8 +184,20 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section" style="text-align: center;">
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item"><h3>35+</h3><p>Years Combined Experience</p></div>
+        <div class="stat-item"><h3>5</h3><p>Specialized Services</p></div>
+        <div class="stat-item"><h3>8+</h3><p>Insurance Plans Accepted</p></div>
+        <div class="stat-item"><h3>100%</h3><p>Patient-Centered Care</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA with background -->
+  <section class="cta-section">
     <div class="container fade-in">
       <h2>Begin Your Healing Journey</h2>
       <p style="max-width: 500px; margin: 0 auto 24px;">Don't let a chronic wound hold you back. Our team is ready to help you heal.</p>
