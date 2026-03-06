@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Patient Form | Full Spectrum Wound Care</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><img src="logo.png" alt="Full Spectrum Wound Care" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="patient-info.html" class="active">Patient Information</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="tel:9369668181" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (936) 966-8181
+      </a>
+      <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="hero" style="padding: 130px 0 40px;">
+    <div class="container">
+      <span class="section-label">Patient Forms</span>
+      <h1>New Patient <span>Health History</span></h1>
+      <p style="max-width: 600px;">Please complete this form before your first appointment. You can also <a href="FSWC-New-Patient-Questionnaire.pdf" target="_blank">download the PDF version</a>.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 40px;">
+    <div class="container form-page-container">
+
+      <!-- DEMOGRAPHICS -->
+      <div class="form-section fade-in">
+        <h3>Patient Information</h3>
+        <div class="form-row" style="margin-bottom: 20px;">
+          <div class="form-group">
+            <label>Patient Name *</label>
+            <input type="text" name="patient_name" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Date of Birth *</label>
+              <input type="date" name="dob" required />
+            </div>
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="form-group-inline" style="padding-top: 8px;">
+                <label><input type="radio" name="gender" value="M" /> Male</label>
+                <label><input type="radio" name="gender" value="F" /> Female</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label>Address</label>
+          <input type="text" name="address" placeholder="Street, City, State, ZIP" />
+        </div>
+        <div class="form-row" style="margin-bottom: 20px;">
+          <div class="form-group">
+            <label>Cell Phone</label>
+            <input type="tel" name="cell_phone" />
+          </div>
+          <div class="form-group">
+            <label>Home Phone</label>
+            <input type="tel" name="home_phone" />
+          </div>
+        </div>
+        <div class="form-row" style="margin-bottom: 20px;">
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" />
+          </div>
+          <div class="form-group">
+            <label>Emergency Contact (Name / Number)</label>
+            <input type="text" name="emergency_contact" />
+          </div>
+        </div>
+        <div class="form-row-3" style="margin-bottom: 20px;">
+          <div class="form-group">
+            <label>Insurance Name</label>
+            <input type="text" name="insurance_name" />
+          </div>
+          <div class="form-group">
+            <label>Insurance ID</label>
+            <input type="text" name="insurance_id" />
+          </div>
+          <div class="form-group">
+            <label>Group #</label>
+            <input type="text" name="insurance_grp" />
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label>How should we contact you?</label>
+          <div class="form-group-inline" style="padding-top: 4px;">
+            <label><input type="checkbox" name="contact_pref" value="call" /> Call</label>
+            <label><input type="checkbox" name="contact_pref" value="text" /> Text</label>
+            <label><input type="checkbox" name="contact_pref" value="email" /> Email</label>
+          </div>
+        </div>
+        <div class="form-row" style="margin-bottom: 20px;">
+          <div class="form-group">
+            <label>Pharmacy</label>
+            <input type="text" name="pharmacy" />
+          </div>
+          <div class="form-group">
+            <label>Pharmacy Phone Number</label>
+            <input type="tel" name="pharmacy_phone" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Do you have Home Health?</label>
+            <div class="form-group-inline" style="padding-top: 4px;">
+              <label><input type="radio" name="home_health" value="yes" /> Yes</label>
+              <label><input type="radio" name="home_health" value="no" /> No</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Home Health Agency Name / Phone</label>
+            <input type="text" name="home_health_agency" />
+          </div>
+        </div>
+      </div>
+
+      <!-- MEDICATIONS -->
+      <div class="form-section fade-in">
+        <h3>Medications</h3>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 16px;">List all medications, prescription and non-prescription, including herbal supplements, vitamins, and OTC.</p>
+        <table class="med-table" id="med-table">
+          <thead>
+            <tr><th>Medication</th><th>Dose</th><th>Frequency</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><input type="text" name="med_name[]" /></td><td><input type="text" name="med_dose[]" /></td><td><input type="text" name="med_freq[]" /></td></tr>
+            <tr><td><input type="text" name="med_name[]" /></td><td><input type="text" name="med_dose[]" /></td><td><input type="text" name="med_freq[]" /></td></tr>
+            <tr><td><input type="text" name="med_name[]" /></td><td><input type="text" name="med_dose[]" /></td><td><input type="text" name="med_freq[]" /></td></tr>
+            <tr><td><input type="text" name="med_name[]" /></td><td><input type="text" name="med_dose[]" /></td><td><input type="text" name="med_freq[]" /></td></tr>
+            <tr><td><input type="text" name="med_name[]" /></td><td><input type="text" name="med_dose[]" /></td><td><input type="text" name="med_freq[]" /></td></tr>
+          </tbody>
+        </table>
+        <button type="button" class="add-row-btn" id="add-med-row">+ Add Medication</button>
+      </div>
+
+      <!-- ALLERGIES -->
+      <div class="form-section fade-in">
+        <h3>Allergies</h3>
+        <table class="med-table" id="allergy-table">
+          <thead>
+            <tr><th>Allergy</th><th>Reaction</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><input type="text" name="allergy_name[]" /></td><td><input type="text" name="allergy_reaction[]" /></td></tr>
+            <tr><td><input type="text" name="allergy_name[]" /></td><td><input type="text" name="allergy_reaction[]" /></td></tr>
+            <tr><td><input type="text" name="allergy_name[]" /></td><td><input type="text" name="allergy_reaction[]" /></td></tr>
+          </tbody>
+        </table>
+        <button type="button" class="add-row-btn" id="add-allergy-row">+ Add Allergy</button>
+      </div>
+
+      <!-- PAST MEDICAL HISTORY -->
+      <div class="form-section fade-in">
+        <h3>Past Medical History</h3>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 16px;">Please check all that apply.</p>
+        <div class="checkbox-grid">
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="none" /> No Past History</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="copd" /> COPD</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="mrsa_vre" /> MRSA or VRE</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="aids_hiv" /> AIDS/HIV</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="crohns" /> Crohn's Disease</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="ms" /> Multiple Sclerosis</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="amputation" /> Amputation</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="dementia" /> Dementia/Alzheimer's</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="neuropathy" /> Neuropathy</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="anemia" /> Anemia</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="depression" /> Depression</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="osteomyelitis" /> Osteomyelitis</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="anxiety" /> Anxiety Disorder</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="diabetes" /> Diabetes</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="paraplegia" /> Paraplegia/Quadriplegia</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="arthritis" /> Arthritis</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="esrd" /> End Stage Renal Disease</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="pad" /> Peripheral Artery Disease</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="asthma" /> Asthma</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="gout" /> Gout</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="pvd" /> Peripheral Vascular Disease</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="autoimmune" /> Autoimmune Disorder</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="heart_attack" /> Heart Attack/MI</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="reynauds" /> Reynaud's</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="birth_defects" /> Birth Defects</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="heart_disease" /> Heart Disease</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="ra" /> Rheumatoid Arthritis</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="bleeding" /> Bleeding Disorder</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="hepatitis" /> Hepatitis</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="scleroderma" /> Scleroderma</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="blood_clots" /> Blood Clots</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="hbp" /> High Blood Pressure</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="seizure" /> Seizure Disorder</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="burn" /> Burn</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="high_cholesterol" /> High Cholesterol</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="sickle_cell" /> Sickle Cell Disease</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="cancer" /> Cancer</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="lupus" /> Lupus</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="stroke" /> Stroke/CVA</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="chf" /> Congestive Heart Failure</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="lymphedema" /> Lymphedema</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="uc" /> Ulcerative Colitis</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="collagen" /> Collagen Disorder</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="lymphoma" /> Lymphoma</label>
+          <label class="checkbox-item"><input type="checkbox" name="pmh[]" value="venous_insuff" /> Venous Insufficiency</label>
+        </div>
+        <div class="form-group" style="margin-top: 16px;">
+          <label>Other (not listed above)</label>
+          <input type="text" name="pmh_other" />
+        </div>
+      </div>
+
+      <!-- SURGERIES -->
+      <div class="form-section fade-in">
+        <h3>Surgeries &amp; Hospitalizations</h3>
+        <table class="med-table" id="surgery-table">
+          <thead>
+            <tr><th>Type of Surgery/Hospitalization</th><th>Reason</th><th>Month</th><th>Year</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><input type="text" name="surgery_type[]" /></td><td><input type="text" name="surgery_reason[]" /></td><td><input type="text" name="surgery_month[]" /></td><td><input type="text" name="surgery_year[]" /></td></tr>
+            <tr><td><input type="text" name="surgery_type[]" /></td><td><input type="text" name="surgery_reason[]" /></td><td><input type="text" name="surgery_month[]" /></td><td><input type="text" name="surgery_year[]" /></td></tr>
+            <tr><td><input type="text" name="surgery_type[]" /></td><td><input type="text" name="surgery_reason[]" /></td><td><input type="text" name="surgery_month[]" /></td><td><input type="text" name="surgery_year[]" /></td></tr>
+          </tbody>
+        </table>
+        <button type="button" class="add-row-btn" id="add-surgery-row">+ Add Surgery/Hospitalization</button>
+      </div>
+
+      <!-- REVIEW OF SYSTEMS -->
+      <div class="form-section fade-in">
+        <h3>Review of Systems</h3>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">Please check all that apply.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Constitutional</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="fevers" /> Fevers</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="chills" /> Chills</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="fatigue" /> Fatigue</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="weight_changes" /> Marked Weight Changes</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="appetite_loss" /> Loss of Appetite</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="night_sweats" /> Night Sweats</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Gastrointestinal</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="nausea" /> Nausea/Vomiting/Diarrhea</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="stomach_pain" /> Stomach Pain</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="acid_reflux" /> Acid Reflux</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="bowel_incontinence" /> Bowel Incontinence</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Hematologic</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="bruising" /> Bruising</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="bleeding" /> Bleeding</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Allergic/Immunologic</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="freq_rashes" /> Frequent Rashes</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="recurrent_fevers" /> Recurrent Fevers</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="drug_sensitivity" /> Sensitivity to Drugs</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="food_sensitivity" /> Sensitivity to Foods</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="hay_fever" /> Hay Fever/Seasonal Allergies</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="rash" /> Rash</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Eyes</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="glasses" /> Glasses/Contacts</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="vision_changes" /> Vision Changes</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Integumentary (Skin)</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="hair_skin_nail_changes" /> Changes in Hair/Skin/Nails</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="calluses" /> Calluses/Corns</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="hyperpigmentation" /> Color Changes/Hyperpigmentation</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="skin_tears" /> Prone to Skin Tears</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="abnormal_hair" /> Abnormal Hair Growth</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="dryness" /> Dryness</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="itching" /> Itching</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="ulcers" /> Ulcers</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Ear/Nose/Mouth/Throat</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="ear_congestion" /> Ear Congestion</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="hearing_loss" /> Hearing Loss/Hearing Aid</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="ear_pain" /> Ear Pain</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="dental" /> Dental Problems</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="nasal_congestion" /> Nasal Congestion</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="lymph_nodes" /> Painful/Swollen Lymph Nodes</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="sore_throat" /> Sore Throat</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="hoarseness" /> Hoarseness</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Psychiatric</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="anxiety_ros" /> Anxiety</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="claustrophobia" /> Claustrophobia</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="depression_ros" /> Depression</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="suicidal_thoughts" /> Suicidal Thoughts</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="suicide_attempts" /> Suicide Attempts</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="homicidal" /> Homicidal Thoughts</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="mental_illness" /> Mental Illness</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Musculoskeletal</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="assistive_devices" /> Assistive Devices</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="decreased_activity" /> Decreased Activity</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="joint_pain" /> Joint Pain</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="deformities" /> Deformities</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="weakness" /> Weakness</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="frequent_falls" /> Frequent Falls</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Endocrine</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="cold_intolerance" /> Cold Intolerance</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="heat_intolerance" /> Heat Intolerance</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="excessive_thirst" /> Excessive Thirst</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="excessive_urination" /> Excessive Urination</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Respiratory</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="cough" /> Cough</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="sob" /> Shortness of Breath</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="oxygen_use" /> Oxygen Use</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="wheezing" /> Wheezing</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Neurological</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="abnormal_gait" /> Abnormal Gait</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="numbness" /> Numbness</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="neuro_pain" /> Pain from Neuropathy</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="paralysis" /> Paralysis</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="seizures_ros" /> Seizures</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="fainting" /> Fainting</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="memory_loss" /> Memory Loss</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="coordination" /> Loss of Coordination</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Cardiovascular</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="chest_pain" /> Chest Pain</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="dyspnea_exertion" /> Dyspnea with Exertion</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="palpitations" /> Palpitations</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="leg_swelling" /> Leg Swelling</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="leg_resting_pain" /> Leg Resting Pain</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="calf_pain" /> Calf Pain/Cramping with Walking</label>
+          </div>
+          <div>
+            <h4 style="color: var(--teal-dark); margin-bottom: 8px;">Genitourinary</h4>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="blood_urine" /> Blood in Urine</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="frequency" /> Frequency</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="urgency" /> Urgency</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="incontinence" /> Urinary Incontinence</label>
+            <label class="checkbox-item"><input type="checkbox" name="ros[]" value="painful_urination" /> Painful Urination</label>
+          </div>
+        </div>
+        <div class="form-group" style="margin-top: 16px;">
+          <label>Other (not listed above)</label>
+          <input type="text" name="ros_other" />
+        </div>
+      </div>
+
+      <!-- SOCIAL HISTORY -->
+      <div class="form-section fade-in">
+        <h3>Social History</h3>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label>Occupation</label>
+          <input type="text" name="occupation" />
+        </div>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label>Living Arrangements</label>
+          <div style="display: flex; flex-direction: column; gap: 8px; padding-top: 4px;">
+            <label class="checkbox-item"><input type="radio" name="living" value="spouse_family" /> With Spouse/Significant Other or Family Members</label>
+            <label class="checkbox-item"><input type="radio" name="living" value="roommate" /> Roommate(s)</label>
+            <label class="checkbox-item"><input type="radio" name="living" value="alone" /> Alone</label>
+            <label class="checkbox-item"><input type="radio" name="living" value="ltc" /> Long-term Care Facility Resident</label>
+            <label class="checkbox-item"><input type="radio" name="living" value="snf" /> Skilled Nursing Facility</label>
+            <label class="checkbox-item"><input type="radio" name="living" value="alf" /> Assisted Living Facility Resident</label>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="form-group">
+            <label>Do you use tobacco?</label>
+            <div class="form-group-inline" style="padding-top: 4px;">
+              <label><input type="radio" name="tobacco" value="yes" /> Yes</label>
+              <label><input type="radio" name="tobacco" value="no" /> No</label>
+              <label><input type="radio" name="tobacco" value="quit" /> Quit</label>
+            </div>
+            <input type="text" name="tobacco_detail" placeholder="Type and amount per day/week" style="margin-top: 8px;" />
+            <input type="text" name="tobacco_quit_year" placeholder="If quit, year quit" style="margin-top: 4px;" />
+          </div>
+          <div class="form-group">
+            <label>Do you vape?</label>
+            <div class="form-group-inline" style="padding-top: 4px;">
+              <label><input type="radio" name="vape" value="yes" /> Yes</label>
+              <label><input type="radio" name="vape" value="no" /> No</label>
+              <label><input type="radio" name="vape" value="quit" /> Quit</label>
+            </div>
+            <input type="text" name="vape_detail" placeholder="Nicotine level and amount per day/week" style="margin-top: 8px;" />
+          </div>
+          <div class="form-group">
+            <label>Do you drink alcohol?</label>
+            <div class="form-group-inline" style="padding-top: 4px;">
+              <label><input type="radio" name="alcohol" value="yes" /> Yes</label>
+              <label><input type="radio" name="alcohol" value="no" /> No</label>
+              <label><input type="radio" name="alcohol" value="quit" /> Quit</label>
+            </div>
+            <input type="text" name="alcohol_detail" placeholder="Type and amount per day/week" style="margin-top: 8px;" />
+          </div>
+          <div class="form-group">
+            <label>Do you use recreational drugs?</label>
+            <div class="form-group-inline" style="padding-top: 4px;">
+              <label><input type="radio" name="drugs" value="yes" /> Yes</label>
+              <label><input type="radio" name="drugs" value="no" /> No</label>
+              <label><input type="radio" name="drugs" value="quit" /> Quit</label>
+            </div>
+            <input type="text" name="drugs_detail" placeholder="Type and how often" style="margin-top: 8px;" />
+          </div>
+        </div>
+      </div>
+
+      <!-- FAMILY HISTORY -->
+      <div class="form-section fade-in">
+        <h3>Family History</h3>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 16px;">Please check all that apply.</p>
+        <div style="overflow-x: auto;">
+          <table class="family-table">
+            <thead>
+              <tr>
+                <th style="text-align: left;">Condition</th>
+                <th>Mother</th>
+                <th>Father</th>
+                <th>Maternal Grandparents</th>
+                <th>Paternal Grandparents</th>
+                <th>Sibling</th>
+                <th>Child</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Autoimmune Disease</td><td><input type="checkbox" name="fh_autoimmune[]" value="mother" /></td><td><input type="checkbox" name="fh_autoimmune[]" value="father" /></td><td><input type="checkbox" name="fh_autoimmune[]" value="mgp" /></td><td><input type="checkbox" name="fh_autoimmune[]" value="pgp" /></td><td><input type="checkbox" name="fh_autoimmune[]" value="sibling" /></td><td><input type="checkbox" name="fh_autoimmune[]" value="child" /></td></tr>
+              <tr><td>Cancer</td><td><input type="checkbox" name="fh_cancer[]" value="mother" /></td><td><input type="checkbox" name="fh_cancer[]" value="father" /></td><td><input type="checkbox" name="fh_cancer[]" value="mgp" /></td><td><input type="checkbox" name="fh_cancer[]" value="pgp" /></td><td><input type="checkbox" name="fh_cancer[]" value="sibling" /></td><td><input type="checkbox" name="fh_cancer[]" value="child" /></td></tr>
+              <tr><td>Diabetes</td><td><input type="checkbox" name="fh_diabetes[]" value="mother" /></td><td><input type="checkbox" name="fh_diabetes[]" value="father" /></td><td><input type="checkbox" name="fh_diabetes[]" value="mgp" /></td><td><input type="checkbox" name="fh_diabetes[]" value="pgp" /></td><td><input type="checkbox" name="fh_diabetes[]" value="sibling" /></td><td><input type="checkbox" name="fh_diabetes[]" value="child" /></td></tr>
+              <tr><td>Heart Disease</td><td><input type="checkbox" name="fh_heart[]" value="mother" /></td><td><input type="checkbox" name="fh_heart[]" value="father" /></td><td><input type="checkbox" name="fh_heart[]" value="mgp" /></td><td><input type="checkbox" name="fh_heart[]" value="pgp" /></td><td><input type="checkbox" name="fh_heart[]" value="sibling" /></td><td><input type="checkbox" name="fh_heart[]" value="child" /></td></tr>
+              <tr><td>High Blood Pressure</td><td><input type="checkbox" name="fh_hbp[]" value="mother" /></td><td><input type="checkbox" name="fh_hbp[]" value="father" /></td><td><input type="checkbox" name="fh_hbp[]" value="mgp" /></td><td><input type="checkbox" name="fh_hbp[]" value="pgp" /></td><td><input type="checkbox" name="fh_hbp[]" value="sibling" /></td><td><input type="checkbox" name="fh_hbp[]" value="child" /></td></tr>
+              <tr><td>Kidney Disease</td><td><input type="checkbox" name="fh_kidney[]" value="mother" /></td><td><input type="checkbox" name="fh_kidney[]" value="father" /></td><td><input type="checkbox" name="fh_kidney[]" value="mgp" /></td><td><input type="checkbox" name="fh_kidney[]" value="pgp" /></td><td><input type="checkbox" name="fh_kidney[]" value="sibling" /></td><td><input type="checkbox" name="fh_kidney[]" value="child" /></td></tr>
+              <tr><td>Lung Disease</td><td><input type="checkbox" name="fh_lung[]" value="mother" /></td><td><input type="checkbox" name="fh_lung[]" value="father" /></td><td><input type="checkbox" name="fh_lung[]" value="mgp" /></td><td><input type="checkbox" name="fh_lung[]" value="pgp" /></td><td><input type="checkbox" name="fh_lung[]" value="sibling" /></td><td><input type="checkbox" name="fh_lung[]" value="child" /></td></tr>
+              <tr><td>Stroke</td><td><input type="checkbox" name="fh_stroke[]" value="mother" /></td><td><input type="checkbox" name="fh_stroke[]" value="father" /></td><td><input type="checkbox" name="fh_stroke[]" value="mgp" /></td><td><input type="checkbox" name="fh_stroke[]" value="pgp" /></td><td><input type="checkbox" name="fh_stroke[]" value="sibling" /></td><td><input type="checkbox" name="fh_stroke[]" value="child" /></td></tr>
+              <tr><td>Unknown</td><td colspan="6" style="text-align: left; padding-left: 20px;"><input type="checkbox" name="fh_unknown" value="yes" /> Check if family history is unknown</td></tr>
+              <tr><td>None of These Apply</td><td colspan="6" style="text-align: left; padding-left: 20px;"><input type="checkbox" name="fh_none" value="yes" /> Check if none apply</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- WOUND INFO -->
+      <div class="form-section fade-in">
+        <h3>Wound / Ulcer Information</h3>
+        <div class="form-row" style="margin-bottom: 20px;">
+          <div class="form-group">
+            <label>Current wound/ulcer location(s)</label>
+            <input type="text" name="wound_location" />
+          </div>
+          <div class="form-group">
+            <label>For how long?</label>
+            <input type="text" name="wound_duration" />
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label>What was the cause of the wound/ulcer?</label>
+          <input type="text" name="wound_cause" />
+        </div>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label>Prior debridement or hospitalization?</label>
+          <div class="form-group-inline" style="padding-top: 4px;">
+            <label><input type="radio" name="prior_debridement" value="yes" /> Yes</label>
+            <label><input type="radio" name="prior_debridement" value="no" /> No</label>
+          </div>
+          <input type="text" name="prior_debridement_desc" placeholder="If yes, please describe" style="margin-top: 8px;" />
+        </div>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label>What treatments/ointments have you tried?</label>
+          <textarea name="treatments_tried" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Anything else we should know?</label>
+          <textarea name="anything_else" rows="3"></textarea>
+        </div>
+      </div>
+
+      <!-- FORM ACTIONS -->
+      <div class="form-actions no-print">
+        <button type="button" class="btn btn-primary" id="print-form">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print Completed Form
+        </button>
+        <a href="FSWC-New-Patient-Questionnaire.pdf" target="_blank" class="btn btn-outline">Download PDF Instead</a>
+      </div>
+      <p style="text-align: center; margin-top: 16px; font-size: 0.85rem; color: var(--text-light);">Please print your completed form and bring it to your first appointment.</p>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Full Spectrum Wound Care" />
+          <p>Advanced wound care treatment in Huntsville, Texas. Dedicated to healing chronic and complex wounds with compassion and expertise.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#advanced-dressings">Wound Care Dressings</a></li>
+            <li><a href="services.html#tissue-grafts">Tissue Grafts</a></li>
+            <li><a href="services.html#debridement">Wound Debridement</a></li>
+            <li><a href="services.html#npwt">NPWT</a></li>
+            <li><a href="services.html#red-light">Red Light Therapy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html">Our Team</a></li>
+            <li><a href="patient-info.html">Insurance</a></li>
+            <li><a href="new-patient-form.html">Patient Forms</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <h4>Contact</h4>
+          <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> 100 Medical Center Pkwy, Ste #100<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Huntsville, TX 77340</p>
+          <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> (936) 966-8181</p>
+          <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> cynthia@fullspectrumwound.com</p>
+          <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg> Fax: (936) 571-0366</p>
+          <p style="margin-top: 12px; font-size: 0.8rem; color: rgba(255,255,255,0.4);">Tue–Wed: 8:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2025 Full Spectrum Wound Care. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>
