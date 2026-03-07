@@ -26,7 +26,7 @@
   --radius-lg: 16px;
   --radius-xl: 24px;
   --max-width: 1200px;
-  --nav-height: 88px;
+  --nav-height: 92px;
 }
 
 /* Reset & Base */
@@ -77,8 +77,8 @@ p { margin-bottom: 1rem; }
 }
 .navbar.scrolled { border-bottom-color: var(--border-light); box-shadow: 0 1px 24px var(--shadow); }
 .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 100%; }
-.nav-logo { display: flex; align-items: center; }
-.nav-logo img { height: 68px; width: auto; padding: 4px 0; }
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+.nav-logo img { height: 72px; width: auto; object-fit: contain; }
 .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
 .nav-links a {
   color: var(--text-body); font-size: 0.88rem; font-weight: 500;
@@ -313,16 +313,8 @@ p { margin-bottom: 1rem; }
   align-items: center; justify-content: center; gap: 10px; min-height: 100px;
 }
 .insurance-item:hover { border-color: var(--teal); box-shadow: 0 4px 16px var(--shadow); transform: translateY(-2px); }
-.insurance-item img { height: 40px; width: auto; object-fit: contain; }
-.insurance-logo { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2; }
-.insurance-logo.aetna { color: #7D3F98; }
-.insurance-logo.bcbs { color: #0072CE; }
-.insurance-logo.cigna { color: #00BCD4; }
-.insurance-logo.umr { color: #003DA5; }
-.insurance-logo.uhc { color: #002677; }
-.insurance-logo.ambetter { color: #00A651; }
-.insurance-logo.medicare { color: #003DA5; }
-.insurance-logo.wellmed { color: #00843D; }
+.insurance-item img { height: 36px; width: auto; max-width: 140px; object-fit: contain; }
+.insurance-item span { font-size: 0.72rem; color: var(--text-light); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
 
 /* ============================================
    Contact
@@ -388,11 +380,9 @@ p { margin-bottom: 1rem; }
    ============================================ */
 .footer { background: var(--text-dark); color: rgba(255, 255, 255, 0.7); padding: 72px 0 24px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-.footer-brand .footer-logo-text {
-  font-size: 1.1rem; font-weight: 700; color: rgba(255,255,255,0.85);
-  margin-bottom: 16px; line-height: 1.3;
+.footer-brand .footer-logo-img {
+  height: 52px; width: auto; margin-bottom: 16px; opacity: 0.85;
 }
-.footer-brand .footer-logo-text span { color: var(--teal); }
 .footer-brand p { font-size: 0.85rem; line-height: 1.7; color: rgba(255, 255, 255, 0.45); }
 .footer h4 { color: var(--white); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
 .footer ul { list-style: none; }
